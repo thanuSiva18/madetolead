@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,17 +17,19 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "Process", path: "/process" },
-    { name: "Case Studies", path: "/case-studies" },
-    { name: "FAQ", path: "/faq" },
-    { name: "Contact", path: "/contact" },
+    { name: "Services", href: "#services" },
+    { name: "Process", href: "#process" },
+    { name: "Case Studies", href: "#case-studies" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Contact", href: "#contact" },
   ];
 
-  const scrollToContact = () => {
-    if (location.pathname === "/contact") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.getElementById(href.substring(1));
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
     }
   };
 
@@ -53,26 +54,27 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors link-underline ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-foreground/80 hover:text-primary"
-                }`}
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-sm font-medium transition-colors link-underline text-foreground/80 hover:text-primary"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </div>
 
           {/* CTA Button - Desktop */}
-          <Link to="/contact" onClick={scrollToContact} className="hidden lg:block">
+          <a 
+            href="#contact" 
+            onClick={(e) => handleNavClick(e, "#contact")} 
+            className="hidden lg:block"
+          >
             <Button variant="hero" size="lg">
               Book a Free AI Audit
             </Button>
-          </Link>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -89,30 +91,23 @@ const Navigation = () => {
           <div className="lg:hidden pb-4 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-sm font-medium py-2 ${
-                    location.pathname === link.path
-                      ? "text-primary"
-                      : "text-foreground/80"
-                  }`}
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="text-sm font-medium py-2 text-foreground/80"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
-              <Link
-                to="/contact"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  scrollToContact();
-                }}
+              <a
+                href="#contact"
+                onClick={(e) => handleNavClick(e, "#contact")}
               >
                 <Button variant="hero" size="lg" className="w-full">
                   Book a Free AI Audit
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         )}

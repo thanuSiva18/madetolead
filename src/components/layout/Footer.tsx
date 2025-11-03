@@ -1,16 +1,22 @@
-import { Link } from "react-router-dom";
 import { Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="border-t border-border bg-card">
       <div className="container mx-auto px-4 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div>
-            <Link to="/" className="text-2xl font-bold text-gradient">
+            <div className="text-2xl font-bold text-gradient cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               MadeToLead
-            </Link>
+            </div>
             <p className="mt-4 text-muted-foreground max-w-sm">
               Building 1,000 scalable businesses by 2027 using AI, automation, and
               creativity.
@@ -21,30 +27,30 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <div className="flex flex-col gap-2">
-              <Link
-                to="/process"
-                className="text-muted-foreground hover:text-primary transition-colors"
+              <button
+                onClick={() => scrollToSection('process')}
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
               >
                 Process
-              </Link>
-              <Link
-                to="/services"
-                className="text-muted-foreground hover:text-primary transition-colors"
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
               >
                 Services
-              </Link>
-              <Link
-                to="/faq"
-                className="text-muted-foreground hover:text-primary transition-colors"
+              </button>
+              <button
+                onClick={() => scrollToSection('faq')}
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
               >
                 FAQ
-              </Link>
-              <Link
-                to="/contact"
-                className="text-muted-foreground hover:text-primary transition-colors"
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
               >
                 Contact
-              </Link>
+              </button>
             </div>
           </div>
 

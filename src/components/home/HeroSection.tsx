@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background Gradient */}
@@ -40,17 +46,22 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <Link to="/contact">
-              <Button variant="cta" size="xl" className="group">
-                Book a Free AI Audit
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link to="/services">
-              <Button variant="outline" size="xl">
-                Explore Services
-              </Button>
-            </Link>
+            <Button 
+              variant="cta" 
+              size="xl" 
+              className="group"
+              onClick={() => scrollToSection('contact')}
+            >
+              Book a Free AI Audit
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button 
+              variant="outline" 
+              size="xl"
+              onClick={() => scrollToSection('services')}
+            >
+              Explore Services
+            </Button>
           </div>
 
           {/* Stats Preview */}
