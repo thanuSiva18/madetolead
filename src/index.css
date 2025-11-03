@@ -2,69 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* MadeToLead AI-First Design System */
-    
-    /* Base Colors - Dark Charcoal Theme */
     --background: 0 0% 4%;
     --foreground: 0 0% 98%;
-
-    /* Card & Surface Colors */
     --card: 0 0% 8%;
     --card-foreground: 0 0% 98%;
     --card-hover: 0 0% 12%;
-
-    /* Popover Colors */
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
-
-    /* Electric Blue Primary */
     --primary: 199 89% 48%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 199 89% 65%;
-    
-    /* Secondary & Muted */
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
-    
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
-
-    /* Electric Blue Accent */
     --accent: 199 89% 55%;
     --accent-foreground: 0 0% 100%;
-
-    /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-
-    /* Borders & Inputs */
     --border: 0 0% 20%;
     --input: 0 0% 18%;
     --ring: 199 89% 48%;
-
     --radius: 0.75rem;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%), hsl(199 89% 65%));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(199 89% 8%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(199 89% 48% / 0.15), transparent 70%);
-    
-    /* Shadows with Glow */
-    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -74,52 +37,30 @@ All colors MUST be HSL.
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Smooth Scrolling */
   html {
     scroll-behavior: smooth;
-  }
-
-  /* Custom Scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-background;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-primary/50 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary;
   }
 }
 
 @layer utilities {
-  /* Glow Text Effect */
   .text-glow {
-    text-shadow: 0 0 20px hsl(var(--primary-glow) / 0.5);
+    text-shadow: 0 0 20px hsla(199, 89%, 65%, 0.5);
   }
 
-  /* Gradient Text */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
+    background-image: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(199, 89%, 65%));
   }
 
-  /* Card Hover Effect */
   .card-hover {
     @apply transition-all duration-300;
   }
 
   .card-hover:hover {
-    @apply scale-105 shadow-glow;
-    box-shadow: var(--shadow-glow);
+    transform: scale(1.05);
+    box-shadow: 0 0 40px hsla(199, 89%, 48%, 0.3);
   }
 
-  /* Animated Underline */
   .link-underline {
     @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }

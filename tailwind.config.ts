@@ -81,11 +81,11 @@ export default {
           "0%": { transform: "scale(0.95)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        float: {
+        "float": {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        pulse-glow: {
+        "pulse-glow": {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
         },
