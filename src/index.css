@@ -11,20 +11,20 @@
     --card-hover: 0 0% 12%;
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
-    --primary: 199 89% 48%;
+    --primary: 263 93% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 199 89% 65%;
+    --primary-glow: 263 93% 70%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
-    --accent: 199 89% 55%;
+    --accent: 263 93% 65%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 20%;
     --input: 0 0% 18%;
-    --ring: 199 89% 48%;
+    --ring: 263 93% 58%;
     --radius: 0.75rem;
   }
 
@@ -44,12 +44,12 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 20px hsla(199, 89%, 65%, 0.5);
+    text-shadow: 0 0 20px hsla(263, 93%, 70%, 0.5);
   }
 
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(199, 89%, 65%));
+    background-image: linear-gradient(135deg, hsl(263, 93%, 58%), hsl(263, 93%, 70%));
   }
 
   .card-hover {
@@ -58,7 +58,7 @@
 
   .card-hover:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 40px hsla(199, 89%, 48%, 0.3);
+    box-shadow: 0 0 40px hsla(263, 93%, 58%, 0.3);
   }
 
   .link-underline {
