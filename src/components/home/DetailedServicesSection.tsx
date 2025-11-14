@@ -1,72 +1,46 @@
 import { Button } from "@/components/ui/button";
 import {
-  TrendingUp,
   Bot,
   Code,
   BarChart3,
-  Palette,
   ArrowRight,
 } from "lucide-react";
 
 const services = [
   {
-    icon: TrendingUp,
-    title: "Performance Marketing",
-    description:
-      "Meta Ads, Google Ads, Analytics. Data-driven campaigns that convert.",
-    features: [
-      "Paid social media advertising",
-      "Google Ads & PPC campaigns",
-      "Conversion tracking & analytics",
-      "ROI optimization",
-    ],
-  },
-  {
     icon: Bot,
-    title: "AI Automation & Workflows",
+    title: "AI Automation & Operations",
     description:
-      "Chatbots, CRM, Integrations. Save hours with intelligent automation.",
+      "Automate workflows and scale operations without hiring. AI chatbots, CRM automation, integrations.",
     features: [
       "AI chatbots & voice assistants",
-      "CRM automation",
-      "Workflow integrations",
-      "Process optimization",
+      "CRM & workflow automation",
+      "Process integrations",
+      "Intelligent scheduling",
     ],
   },
   {
     icon: Code,
-    title: "Web & Tech Development",
+    title: "AI Websites & Tech Systems",
     description:
-      "Websites, Funnels, SaaS, Apps. Custom built, perfectly tailored.",
+      "Custom web platforms and SaaS built for growth. Funnels, e-commerce, ERPs, internal tools.",
     features: [
-      "Custom web applications",
+      "AI-powered websites",
       "E-commerce platforms",
-      "Landing pages & funnels",
-      "Progressive web apps",
+      "Custom SaaS & ERPs",
+      "Client portals & apps",
     ],
   },
   {
     icon: BarChart3,
-    title: "Business Intelligence",
+    title: "Data & Intelligence",
     description:
-      "Dashboards, Reports, Insights. Make smarter decisions with data.",
+      "Transform data into competitive advantage. Analytics dashboards, insights, and predictive systems.",
     features: [
       "Custom analytics dashboards",
       "Business intelligence reports",
       "Predictive analytics",
-      "Data visualization",
-    ],
-  },
-  {
-    icon: Palette,
-    title: "Creative & Branding",
-    description:
-      "Design, Strategy, Content. Stand out with memorable brand identity.",
-    features: [
-      "Brand identity & strategy",
-      "UI/UX design",
-      "Content creation",
-      "Marketing collateral",
+      "Real-time monitoring",
     ],
   },
 ];
@@ -81,15 +55,14 @@ const DetailedServicesSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            Built to Scale. <span className="text-gradient">Fueled by AI.</span>
+            Full-Stack AI <span className="text-gradient">Solutions</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Comprehensive solutions for modern businesses that want to grow fast
-            and scale smart.
+            Three core pillars to transform your business. From automation to intelligence, all AI-powered.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -130,8 +103,7 @@ const DetailedServicesSection = () => {
             Need a custom solution?
           </h3>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            We build tailored systems for unique business needs. Let's discuss your
-            project.
+            Every business is unique. Let's build the right system for your goals.
           </p>
           <Button variant="cta" size="xl" onClick={scrollToContact}>
             Book a Free AI Audit

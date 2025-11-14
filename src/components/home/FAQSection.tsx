@@ -7,44 +7,44 @@ import {
 
 const faqs = [
   {
-    question: "What exactly does MadeToLead do?",
+    question: "Will this actually increase our revenue?",
     answer:
-      "We build AI-driven digital systems for businesses. This includes intelligent websites, custom ERP & SaaS solutions, automation workflows, chatbots, analytics dashboards, and complete digital transformation strategies. We're your technical partner for scaling through technology.",
+      "Yes. Our systems are built around one goal: measurable business outcomes. Whether it's automation saving your team hours, AI driving conversions, or data-driven decisions increasing profit margins — we focus on what moves your bottom line. Your success is our success.",
   },
   {
-    question: "Who do you work with?",
+    question: "What if we don't have a tech team?",
     answer:
-      "We work with ambitious small businesses, startups, and entrepreneurs who want to scale efficiently. Our clients range from e-commerce brands to consulting firms, SaaS startups to local service providers. If you're growth-focused and ready to leverage AI, we're a great fit.",
+      "Perfect. We become your technical partner. We build, deploy, maintain, and optimize everything. No need for in-house developers. We handle the complexity so you can focus on running your business.",
   },
   {
-    question: "How is your agency different from others?",
+    question: "How is this different from other AI agencies?",
     answer:
-      "We're AI-first, which means we don't just build websites — we engineer systems that learn, adapt, and scale with your business. We focus on automation and intelligence, not just aesthetics. Plus, we're transparent with our process, pricing, and results. No fluff, just impact.",
+      "Most agencies talk about AI. We engineer it. We build systems that actually learn and scale—not just add a chatbot to your website. Full-stack approach means we own the entire outcome, from strategy to deployment to optimization.",
   },
   {
-    question: "Can I work with you if I don't understand tech or AI?",
+    question: "What's the timeline and cost?",
     answer:
-      "Absolutely! You don't need to be technical at all. We translate complex technology into simple solutions. Our process is designed to guide you step-by-step, and we explain everything in plain language. You focus on your business goals, we handle the technical execution.",
+      "It depends on complexity. Simple automation: 2-3 weeks. Full systems: 2-3 months. Cost ranges from ₹50,000 for focused solutions to custom enterprise pricing. We're transparent about timelines and budgets upfront. Book a free audit to get a clear proposal.",
   },
   {
-    question: "What's your pricing model?",
+    question: "Will we be locked in with you long-term?",
     answer:
-      "We offer both project-based and retainer models depending on your needs. Project pricing starts from ₹50,000 for basic solutions, while comprehensive systems can range higher based on complexity and scope. We always provide transparent quotes after understanding your requirements. Book a free consultation to get a custom proposal.",
+      "No. We build independent systems that your team can manage. Some clients choose ongoing optimization (retainers), others go solo after launch. We're confident enough in our work that we don't need lock-in clauses.",
   },
   {
-    question: "How long until I see results?",
+    question: "Can you really build custom software?",
     answer:
-      "It depends on the project scope. Simple automation workflows can be deployed in 2-3 weeks. Complete systems like custom ERPs or SaaS platforms typically take 2-3 months. We break projects into phases with clear milestones so you see progress regularly. Quick wins first, then scale.",
+      "Yes. Custom ERPs, SaaS platforms, internal tools, client portals—we build from scratch tailored to your exact workflow. We don't force you into generic templates.",
   },
   {
-    question: "Do you build custom software or tools?",
+    question: "How do we know if this is worth the investment?",
     answer:
-      "Yes! Custom development is one of our core strengths. Whether you need a proprietary CRM, internal management tool, client portal, or completely unique software — we build it from scratch, tailored exactly to your workflow and requirements.",
+      "Book a free AI audit. We'll map your current operations, identify automation opportunities, and show you the ROI potential. If it doesn't make sense, you walk away with valuable insights. No obligation.",
   },
   {
-    question: "How do I get started?",
+    question: "What support do we get after launch?",
     answer:
-      "Simple: Book a free AI audit using the button on any page. We'll hop on a call, understand your business, identify automation opportunities, and create a custom roadmap. No pressure, no commitments — just a clear plan forward. If it makes sense, we start building. If not, you still walk away with valuable insights.",
+      "Full support. We monitor your systems, optimize for performance, handle updates, and scale as you grow. You can go fully managed or have us on standby—your choice.",
   },
 ];
 

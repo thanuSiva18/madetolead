@@ -60,10 +60,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            Let's Build <span className="text-gradient">Together</span>
+            Ready to <span className="text-gradient">Grow?</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            We help founders turn chaos into automation and clarity.
+            Book a free AI audit. Let's talk about your business goals.
           </p>
         </div>
 
@@ -102,25 +102,23 @@ const ContactSection = () => {
             </div>
 
             <div className="bg-card border border-primary/30 rounded-2xl p-8">
-              <h3 className="text-xl font-bold mb-4">What happens next?</h3>
+              <h3 className="text-xl font-bold mb-4">The Process</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2"></div>
-                  <span>We review your requirements and schedule a call</span>
+                  <span>Discovery call to understand your goals</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2"></div>
-                  <span>
-                    Free AI audit to identify automation opportunities
-                  </span>
+                  <span>Free AI audit identifying growth opportunities</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2"></div>
-                  <span>Custom proposal with timeline and pricing</span>
+                  <span>Custom proposal with clear ROI</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2"></div>
-                  <span>If we're a fit, we start building your system</span>
+                  <span>Build and launch your system</span>
                 </li>
               </ul>
             </div>

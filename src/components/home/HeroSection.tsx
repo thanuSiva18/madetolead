@@ -29,7 +29,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
             <Sparkles size={16} className="text-primary" />
-            <span className="text-sm text-primary font-medium">AI-First Agency</span>
+            <span className="text-sm text-primary font-medium">Full-Stack AI Partner</span>
           </div>
 
           {/* Main Headline */}
@@ -41,7 +41,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-12 animate-fade-in max-w-3xl mx-auto" style={{ animationDelay: "0.1s" }}>
-            From intelligent websites to ERP & SaaS solutions.
+            A-Z digital business growth.
           </p>
 
           {/* CTA Buttons */}
@@ -64,21 +64,7 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Stats Preview */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-16 pt-16 border-t border-border/50 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <div>
-              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">3+</div>
-              <div className="text-sm text-muted-foreground">Active Projects</div>
-            </div>
-            <div>
-              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">₹1L+</div>
-              <div className="text-sm text-muted-foreground">Monthly Revenue</div>
-            </div>
-            <div>
-              <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">5+</div>
-              <div className="text-sm text-muted-foreground">Tools Integrated</div>
-            </div>
-          </div>
+
         </div>
       </div>
 

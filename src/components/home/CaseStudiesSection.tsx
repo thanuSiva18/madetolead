@@ -4,10 +4,10 @@ const caseStudies = [
   {
     company: "Tech Startup X",
     industry: "SaaS",
-    result: "Saved 3 hours/day via AI automation",
+    result: "60% time saved through AI automation",
     description:
-      "Implemented custom AI chatbot and workflow automation that handles customer support queries and internal processes, reducing manual work by 60%.",
-    metrics: ["60% reduced manual work", "3hrs saved daily", "90% customer satisfaction"],
+      "Custom AI chatbot and workflow automation handling customer support and internal processes.",
+    metrics: ["60% reduced manual work", "3 hours saved daily", "90% customer satisfaction"],
     color: "from-blue-500/20 to-cyan-500/20",
   },
   {
@@ -15,17 +15,17 @@ const caseStudies = [
     industry: "Retail",
     result: "3x revenue growth in 6 months",
     description:
-      "Built custom e-commerce platform with AI-powered product recommendations and automated marketing campaigns that scaled revenue from ₹2L to ₹6L monthly.",
+      "Custom e-commerce platform with AI recommendations and automated marketing campaigns.",
     metrics: ["3x revenue increase", "10k+ monthly visitors", "40% conversion lift"],
     color: "from-purple-500/20 to-pink-500/20",
   },
   {
     company: "Consulting Firm Z",
-    industry: "Professional Services",
-    result: "Custom ERP reduced ops time by 50%",
+    industry: "Services",
+    result: "50% faster operations with custom ERP",
     description:
-      "Developed tailored ERP system with analytics dashboard that streamlined operations, client management, and reporting processes.",
-    metrics: ["50% faster operations", "Zero data errors", "Real-time insights"],
+      "Tailored ERP system with analytics dashboard for streamlined operations and real-time insights.",
+    metrics: ["50% faster operations", "Zero data errors", "Real-time reporting"],
     color: "from-emerald-500/20 to-teal-500/20",
   },
 ];
@@ -36,10 +36,10 @@ const CaseStudiesSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            Real Brands. <span className="text-gradient">Real Results.</span>
+            Results That <span className="text-gradient">Speak</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            See how we've helped businesses transform through AI-driven solutions.
+            Real businesses. Real growth. Proven outcomes.
           </p>
         </div>
 
@@ -88,15 +88,13 @@ const CaseStudiesSection = () => {
 
             <div className="relative z-10">
               <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                Featured Success Story
+                Why Clients Choose Us
               </div>
               <h3 className="text-3xl font-bold mb-4">
-                Your success story could be next
+                Your growth starts now
               </h3>
               <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-                We've helped dozens of businesses transform through AI and
-                automation. From startups to established brands, our solutions scale
-                with your ambitions.
+                We don't just build—we partner for lasting growth. Our systems scale with your business.
               </p>
               <div className="flex flex-wrap gap-6">
                 <div>

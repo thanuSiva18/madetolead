@@ -3,10 +3,9 @@ import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import DetailedServicesSection from "@/components/home/DetailedServicesSection";
-import ProcessSection from "@/components/home/ProcessSection";
+import ClientLogosSection from "@/components/home/ClientLogosSection";
 import DetailedProcessSection from "@/components/home/DetailedProcessSection";
 import FounderSection from "@/components/home/FounderSection";
-import CaseStudiesSection from "@/components/home/CaseStudiesSection";
 import FAQSection from "@/components/home/FAQSection";
 import ContactSection from "@/components/home/ContactSection";
 import CTASection from "@/components/home/CTASection";
@@ -18,12 +17,11 @@ const Index = () => {
       <Navigation />
       <main>
         <HeroSection />
+        <ClientLogosSection />
         <ServicesSection />
         <DetailedServicesSection />
-        <ProcessSection />
         <DetailedProcessSection />
         <FounderSection />
-        <CaseStudiesSection />
         <FAQSection />
         <ContactSection />
         <CTASection />
