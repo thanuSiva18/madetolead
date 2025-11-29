@@ -10,18 +10,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-24 pb-0">
       {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-50"></div>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-gradient-glow"></div>
-      
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full animate-float"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-primary-glow rounded-full animate-float" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute bottom-40 left-1/4 w-2 h-2 bg-accent rounded-full animate-float" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute top-60 right-1/3 w-2 h-2 bg-primary rounded-full animate-pulse-glow"></div>
-      </div>
+      <div className="absolute inset-0 bg-gradient-hero opacity-40"></div>
 
       {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -34,9 +25,7 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 animate-fade-in leading-tight">
-            We build{" "}
-            <span className="text-gradient">AI-driven digital systems</span>{" "}
-            that scale your business
+            We build <span className="text-gradient">AI-driven digital systems</span> that scale your business
           </h1>
 
           {/* Subheadline */}
@@ -46,25 +35,23 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <Button 
-              variant="cta" 
-              size="xl" 
+            <Button
+              variant="cta"
+              size="xl"
               className="group"
               onClick={() => scrollToSection('contact')}
             >
               Book a Free AI Audit
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="xl"
               onClick={() => scrollToSection('services')}
             >
               Explore Services
             </Button>
           </div>
-
-
         </div>
       </div>
 

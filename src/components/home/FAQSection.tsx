@@ -7,52 +7,47 @@ import {
 
 const faqs = [
   {
-    question: "Will this actually increase our revenue?",
+    question: "Will this help us increase revenue?",
     answer:
-      "Yes. Our systems are built around one goal: measurable business outcomes. Whether it's automation saving your team hours, AI driving conversions, or data-driven decisions increasing profit margins — we focus on what moves your bottom line. Your success is our success.",
+      "Yes. We build systems designed for ROI—whether that’s through higher-converting funnels, better ad targeting, or automated lead follow-ups.",
   },
   {
-    question: "What if we don't have a tech team?",
+    question: "Do we need a tech team?",
     answer:
-      "Perfect. We become your technical partner. We build, deploy, maintain, and optimize everything. No need for in-house developers. We handle the complexity so you can focus on running your business.",
+      "No. We handle everything—design, build, launch, and maintenance. You focus on your business; we handle the tech.",
   },
   {
-    question: "How is this different from other AI agencies?",
+    question: "Are your systems easy to use?",
     answer:
-      "Most agencies talk about AI. We engineer it. We build systems that actually learn and scale—not just add a chatbot to your website. Full-stack approach means we own the entire outcome, from strategy to deployment to optimization.",
+      "Yes. We prioritize simplicity. You get clean dashboards and intuitive tools that your team can use without extensive training.",
   },
   {
-    question: "What's the timeline and cost?",
+    question: "How long do projects take?",
     answer:
-      "It depends on complexity. Simple automation: 2-3 weeks. Full systems: 2-3 months. Cost ranges from ₹50,000 for focused solutions to custom enterprise pricing. We're transparent about timelines and budgets upfront. Book a free audit to get a clear proposal.",
+      "Simple setups take 1-2 weeks. Complex custom builds typically take 4-8 weeks. We move fast.",
   },
   {
-    question: "Will we be locked in with you long-term?",
+    question: "Do you offer support?",
     answer:
-      "No. We build independent systems that your team can manage. Some clients choose ongoing optimization (retainers), others go solo after launch. We're confident enough in our work that we don't need lock-in clauses.",
+      "Yes. We provide ongoing support to ensure your systems keep running smoothly and scale with you.",
   },
   {
-    question: "Can you really build custom software?",
+    question: "Do you build ERP/complex software?",
     answer:
-      "Yes. Custom ERPs, SaaS platforms, internal tools, client portals—we build from scratch tailored to your exact workflow. We don't force you into generic templates.",
+      "Yes. We build custom internal tools, ERPs, and dashboards tailored exactly to your workflow.",
   },
   {
-    question: "How do we know if this is worth the investment?",
+    question: "What’s the price range?",
     answer:
-      "Book a free AI audit. We'll map your current operations, identify automation opportunities, and show you the ROI potential. If it doesn't make sense, you walk away with valuable insights. No obligation.",
-  },
-  {
-    question: "What support do we get after launch?",
-    answer:
-      "Full support. We monitor your systems, optimize for performance, handle updates, and scale as you grow. You can go fully managed or have us on standby—your choice.",
+      "Projects typically range from ₹50,000 for specific setups to custom enterprise pricing for full systems. Book a free audit for a precise quote.",
   },
 ];
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-20 lg:py-32 bg-card/50">
+    <section id="faq" className="py-20 lg:py-32 bg-card/30">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
@@ -67,26 +62,26 @@ const FAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-primary/50 transition-all duration-300"
+                className="bg-card border border-white/5 rounded-2xl px-6 lg:px-8 data-[state=open]:border-primary/30 data-[state=open]:shadow-lg transition-all duration-300"
               >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <span className="font-semibold text-lg">{faq.question}</span>
+                <AccordionTrigger className="text-left hover:no-underline py-6 lg:py-8 [&[data-state=open]>svg]:rotate-45">
+                  <span className="font-bold text-lg lg:text-xl pr-8">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
+                <AccordionContent className="text-muted-foreground pb-8 leading-relaxed text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
 
-          <div className="mt-16 text-center bg-card border border-border rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-3">Still have questions?</h3>
-            <p className="text-muted-foreground mb-6">
+          <div className="mt-20 text-center bg-gradient-to-br from-card to-primary/5 border border-white/10 rounded-3xl p-12">
+            <h3 className="text-2xl lg:text-3xl font-bold mb-4">Still have questions?</h3>
+            <p className="text-muted-foreground mb-8 text-lg">
               We're happy to help. Reach out and let's chat about your project.
             </p>
             <a
               href="mailto:team@madetolead.in"
-              className="inline-flex items-center text-primary font-medium hover:underline"
+              className="inline-flex items-center text-primary font-bold text-xl hover:underline"
             >
               team@madetolead.in
             </a>

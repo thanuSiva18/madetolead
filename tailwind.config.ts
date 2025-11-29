@@ -57,13 +57,15 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        glow: "var(--shadow-glow)",
-        card: "var(--shadow-card)",
+        glow: "0 0 20px hsla(263, 93%, 58%, 0.3)",
+        card: "0 0 40px hsla(263, 93%, 58%, 0.1)",
+        "glow-hover": "0 0 30px hsla(263, 93%, 58%, 0.5)",
       },
       backgroundImage: {
-        "gradient-primary": "var(--gradient-primary)",
-        "gradient-hero": "var(--gradient-hero)",
-        "gradient-glow": "var(--gradient-glow)",
+        "gradient-primary": "linear-gradient(135deg, hsl(263, 93%, 58%), hsl(263, 93%, 70%))",
+        "gradient-hero": "radial-gradient(circle at top center, hsla(263, 93%, 58%, 0.15), transparent 70%)",
+        "gradient-glow": "radial-gradient(circle, hsla(263, 93%, 58%, 0.3) 0%, transparent 70%)",
+        "gradient-card": "linear-gradient(180deg, hsla(263, 93%, 58%, 0.05) 0%, transparent 100%)",
       },
       keyframes: {
         "accordion-down": {
