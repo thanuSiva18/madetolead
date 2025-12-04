@@ -38,6 +38,8 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
   }
 
   h1 {
@@ -61,16 +63,45 @@
     @apply text-muted-foreground;
   }
 
+  /* Remove global section padding to avoid unwanted gaps under fixed navbar */
   section {
-    @apply py-20 lg:py-32;
+    @apply py-0 lg:py-0;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* account for fixed navbar height */
+  }
+
+  /* ChronicleHQ-style marquee animation */
+  .marquee-track {
+    width: max-content;
+    animation: marquee-left 28s linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
 
 @layer utilities {
+  /* Chronicle-style infinite marquee */
+  @keyframes marqueeX {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .marquee-track {
+    width: 200%;
+    animation: marqueeX 20s linear infinite;
+  }
+
   .text-glow {
     text-shadow: 0 0 20px hsla(263, 93%, 70%, 0.5);
   }

@@ -10,6 +10,7 @@ import {
   BarChart3,
   Palette,
   ArrowRight,
+  Settings,
 } from "lucide-react";
 
 const services = [
@@ -73,6 +74,21 @@ const services = [
       "Marketing collateral",
     ],
   },
+  {
+    icon: Settings,
+    title: "Workflow Automation for Businesses",
+    description:
+      "Automate repetitive tasks and optimize daily operations with custom AI and no-code workflows.",
+    features: [
+      "Lead → CRM automations",
+      "Notification & follow-up flows",
+      "Google Sheets → WhatsApp/email automation",
+      "Internal process automation",
+      "Reporting & data sync",
+      "Custom operational workflows",
+    ],
+    cta: "Automate My Workflow",
+  },
 ];
 
 const Services = () => {
@@ -129,7 +145,7 @@ const Services = () => {
                   to="/contact"
                   className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
                 >
-                  Get Started
+                  {service.cta ?? "Get Started"}
                   <ArrowRight size={16} />
                 </Link>
               </div>

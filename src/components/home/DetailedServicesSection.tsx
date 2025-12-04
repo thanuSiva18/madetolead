@@ -86,7 +86,7 @@ const DetailedServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 lg:py-32 relative">
+    <section id="services" className="py-20 lg:py-32 relative bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
@@ -137,8 +137,7 @@ const DetailedServicesSection = () => {
           ))}
         </div>
 
-        <div className="mt-20 bg-gradient-to-r from-card to-card/50 border border-white/5 rounded-2xl p-12 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary/5 to-transparent pointer-events-none"></div>
+        <div className="mt-20 bg-card border border-white/5 rounded-2xl p-12 relative overflow-hidden">
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
             <div className="flex items-start gap-6">
               <div className="hidden lg:flex w-16 h-16 rounded-2xl bg-primary/10 items-center justify-center flex-shrink-0 border border-primary/10">

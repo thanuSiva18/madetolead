@@ -10,20 +10,26 @@ const navLinks = [
 ];
 
 const Navigation = () => (
-  <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur border-b border-border shadow-card">
+  <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur border-b border-border">
     <div className="container mx-auto px-4 lg:px-8">
-      <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="flex items-center justify-between h-14 lg:h-16">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-gradient">
-          MadeToLead
-        </Link>
+          <Link to="/" className="flex items-center">
+            <img
+              src="/logo.svg"
+              alt="Made To Lead"
+              height={32}
+              width={120}
+              className="h-8 w-auto object-contain"
+            />
+          </Link>
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-base font-medium text-foreground/80 hover:text-primary transition-colors"
+              className="text-sm lg:text-base font-medium text-foreground/80 hover:text-primary transition-colors"
             >
               {link.name}
             </a>

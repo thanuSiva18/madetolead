@@ -10,12 +10,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-24 pb-0">
-      {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-40"></div>
+    <section className="relative flex items-start justify-center overflow-hidden !pt-0 !pb-0">
+      
 
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-20 md:pt-24 lg:pt-28 pb-12 md:pb-16 lg:pb-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
