@@ -4,79 +4,91 @@ import {
   Code,
   BarChart3,
   ArrowRight,
-  Globe,
-  Megaphone,
-  Wrench,
+  TrendingUp,
+  Palette,
+  Settings,
 } from "lucide-react";
 
 const services = [
   {
-    icon: Globe,
-    title: "AI-Powered Websites & Funnels",
+    icon: TrendingUp,
+    title: "Performance Marketing",
     description:
-      "High-converting websites and funnels built to turn visitors into customers.",
+      "Meta Ads, Google Ads, Analytics. Data-driven campaigns that convert.",
     features: [
-      "Marketing websites",
-      "Landing pages",
-      "Sales funnels",
-      "E-commerce pages",
-      "AI-optimized content",
-    ],
-    cta: "Build My Website",
-  },
-  {
-    icon: Megaphone,
-    title: "Growth Marketing (SEO + Meta Ads)",
-    description:
-      "SEO and Meta ads strategies to drive traffic and generate leads.",
-    features: [
-      "On-page & technical improvements",
-      "Keyword strategy & Content plan",
-      "Local SEO",
-      "Campaign setup & optimization",
-      "Lead-gen funnels & Retargeting",
+      "Paid social media advertising",
+      "Google Ads & PPC campaigns",
+      "Conversion tracking & analytics",
+      "ROI optimization",
     ],
     cta: "Run My Campaigns",
   },
   {
     icon: Bot,
-    title: "Automation & CRM Systems",
+    title: "AI Automation & Workflows",
     description:
-      "Streamline your operations with AI chatbots and CRM automation.",
+      "Chatbots, CRM, Integrations. Save hours with intelligent automation.",
     features: [
-      "AI chatbots (Web + WhatsApp)",
-      "CRM setup (HubSpot, Zoho)",
-      "Lead follow-up automation",
-      "Appointment flows",
-      "Integrations",
+      "AI chatbots & voice assistants",
+      "CRM automation",
+      "Workflow integrations",
+      "Process optimization",
     ],
     cta: "Automate My Business",
   },
   {
-    icon: BarChart3,
-    title: "Dashboards & Intelligence",
+    icon: Code,
+    title: "Web & Tech Development",
     description:
-      "Visualize your data to make smarter business decisions.",
+      "Websites, Funnels, SaaS, Apps. Custom built, perfectly tailored.",
     features: [
-      "Sales tracking",
-      "Revenue dashboards",
-      "Marketing performance",
-      "KPI reporting",
+      "Custom web applications",
+      "E-commerce platforms",
+      "Landing pages & funnels",
+      "Progressive web apps",
+    ],
+    cta: "Build My Website",
+  },
+  {
+    icon: BarChart3,
+    title: "Business Intelligence",
+    description:
+      "Dashboards, Reports, Insights. Make smarter decisions with data.",
+    features: [
+      "Custom analytics dashboards",
+      "Business intelligence reports",
+      "Predictive analytics",
+      "Data visualization",
     ],
     cta: "Build My Dashboard",
   },
   {
-    icon: Wrench,
-    title: "Lightweight Internal Tools",
+    icon: Palette,
+    title: "Creative & Branding",
     description:
-      "Custom tools to manage your internal processes efficiently.",
+      "Design, Strategy, Content. Stand out with memorable brand identity.",
     features: [
-      "Client portals",
-      "Inventory trackers",
-      "Order management mini-systems",
-      "Simple internal apps",
+      "Brand identity & strategy",
+      "UI/UX design",
+      "Content creation",
+      "Marketing collateral",
     ],
-    cta: "Check My Use Case",
+    cta: "Upgrade My Brand",
+  },
+  {
+    icon: Settings,
+    title: "Workflow Automation for Businesses",
+    description:
+      "Automate repetitive tasks and optimize daily operations with custom AI and no-code workflows.",
+    features: [
+      "Lead → CRM automations",
+      "Notification & follow-up flows",
+      "Google Sheets → WhatsApp/email automation",
+      "Internal process automation",
+      "Reporting & data sync",
+      "Custom operational workflows",
+    ],
+    cta: "Automate My Workflow",
   },
 ];
 
@@ -141,7 +153,7 @@ const DetailedServicesSection = () => {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
             <div className="flex items-start gap-6">
               <div className="hidden lg:flex w-16 h-16 rounded-2xl bg-primary/10 items-center justify-center flex-shrink-0 border border-primary/10">
-                <Wrench className="text-primary" size={32} />
+                <Settings className="text-primary" size={32} />
               </div>
               <div>
                 <h3 className="text-2xl lg:text-3xl font-bold mb-2">

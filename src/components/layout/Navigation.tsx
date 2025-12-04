@@ -35,8 +35,13 @@ const Navigation = () => (
             </a>
           ))}
         </div>
-        {/* CTA Button - Desktop */}
-        <a href="#contact" className="hidden lg:block">
+        {/* CTA Button - Desktop (Calendly) */}
+        <a
+          href="https://calendly.com/madetolead-agency/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:block"
+        >
           <Button variant="hero" size="lg">
             Book a Free AI Audit
           </Button>

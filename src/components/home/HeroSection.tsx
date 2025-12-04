@@ -34,15 +34,21 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <Button
-              variant="cta"
-              size="xl"
+            <a
+              href="https://calendly.com/madetolead-agency/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group"
-              onClick={() => scrollToSection('contact')}
             >
-              Book a Free AI Audit
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </Button>
+              <Button
+                variant="cta"
+                size="xl"
+                className="group"
+              >
+                Book a Free AI Audit
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
             <Button
               variant="outline"
               size="xl"

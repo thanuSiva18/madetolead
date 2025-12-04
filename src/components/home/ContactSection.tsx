@@ -1,59 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
 import { Mail, MapPin } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    businessName: "",
-    website: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    setTimeout(() => {
-      toast({
-        title: "Thanks for reaching out!",
-        description: "Our team will get back to you within 24 hours.",
-      });
-      setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        businessName: "",
-        website: "",
-        message: "",
-      });
-    }, 1000);
-  };
+  // Forms removed; use Calendly CTA instead
 
   return (
     <section id="contact" className="py-20 lg:py-32 relative overflow-hidden">
@@ -126,88 +75,22 @@ const ContactSection = () => {
 
           <div className="bg-card border border-white/5 rounded-2xl p-8 lg:p-10 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary-glow to-primary"></div>
-            <h3 className="text-3xl font-bold mb-8">Send us a message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium ml-1 text-muted-foreground">Name *</label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your full name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="h-12 bg-background/50 border-white/10 focus:border-primary/50 focus:ring-primary/20 transition-all rounded-xl"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium ml-1 text-muted-foreground">Email *</label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="h-12 bg-background/50 border-white/10 focus:border-primary/50 focus:ring-primary/20 transition-all rounded-xl"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="businessName" className="text-sm font-medium ml-1 text-muted-foreground">Business Name</label>
-                <Input
-                  id="businessName"
-                  name="businessName"
-                  type="text"
-                  placeholder="Your company name"
-                  value={formData.businessName}
-                  onChange={handleChange}
-                  className="h-12 bg-background/50 border-white/10 focus:border-primary/50 focus:ring-primary/20 transition-all rounded-xl"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="website" className="text-sm font-medium ml-1 text-muted-foreground">Website/Social Link</label>
-                <Input
-                  id="website"
-                  name="website"
-                  type="url"
-                  placeholder="https://yourwebsite.com"
-                  value={formData.website}
-                  onChange={handleChange}
-                  className="h-12 bg-background/50 border-white/10 focus:border-primary/50 focus:ring-primary/20 transition-all rounded-xl"
-                />
-                <p className="text-xs text-muted-foreground/60 ml-1">Optional, but helps us prepare for the call.</p>
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium ml-1 text-muted-foreground">Biggest Bottleneck *</label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell us about your main challenge or what you're looking to build..."
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="bg-background/50 border-white/10 focus:border-primary/50 focus:ring-primary/20 transition-all rounded-xl resize-none"
-                />
-              </div>
-
+            <h3 className="text-3xl font-bold mb-8">Book a Free AI Audit</h3>
+            <p className="text-muted-foreground mb-6">We’ve removed the form for faster bookings. Use the Calendly link below to schedule a call.</p>
+            <a
+              href="https://calendly.com/madetolead-agency/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full"
+            >
               <Button
-                type="submit"
                 variant="cta"
                 size="lg"
-                className="w-full h-14 text-lg shadow-glow hover:shadow-glow-hover transition-all duration-300 rounded-xl mt-4 font-bold tracking-wide"
-                disabled={isSubmitting}
+                className="w-full h-14 text-lg shadow-glow hover:shadow-glow-hover transition-all duration-300 rounded-xl mt-2 font-bold tracking-wide"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                Book on Calendly
               </Button>
-            </form>
+            </a>
           </div>
         </div>
       </div>

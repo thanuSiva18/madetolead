@@ -2,64 +2,10 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
 import { Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    businessName: "",
-    website: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Thanks for reaching out!",
-        description: "Our team will get back to you within 24 hours.",
-      });
-      setIsSubmitting(false);
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        businessName: "",
-        website: "",
-        message: "",
-      });
-    }, 1000);
-  };
+  // Forms removed in favor of Calendly booking
 
   return (
     <div className="min-h-screen bg-background">
@@ -140,108 +86,13 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Calendly CTA */}
             <div className="bg-card border border-border rounded-2xl p-8">
-              <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Name *
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your full name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Email *
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="businessName"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Business Name
-                  </label>
-                  <Input
-                    id="businessName"
-                    name="businessName"
-                    type="text"
-                    placeholder="Your company name"
-                    value={formData.businessName}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="website"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Website/Social Link
-                  </label>
-                  <Input
-                    id="website"
-                    name="website"
-                    type="url"
-                    placeholder="https://yourwebsite.com"
-                    value={formData.website}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Biggest Bottleneck *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell us about your main challenge or what you're looking to build..."
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  variant="cta"
-                  size="lg"
-                  className="w-full"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
+              <h2 className="text-2xl font-bold mb-6">Book a Free AI Audit</h2>
+              <p className="text-muted-foreground mb-6">Schedule a call instantly via Calendly. We’ll review your goals and share a clear action plan.</p>
+              <a href="https://calendly.com/madetolead-agency/30min" target="_blank" rel="noopener noreferrer" className="inline-block w-full">
+                <Button variant="cta" size="lg" className="w-full">Book on Calendly</Button>
+              </a>
             </div>
           </div>
         </div>

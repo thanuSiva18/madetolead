@@ -163,11 +163,11 @@ const Services = () => {
               We build tailored systems for unique business needs. Let's discuss your
               project.
             </p>
-            <Link to="/contact">
+            <a href="https://calendly.com/madetolead-agency/30min" target="_blank" rel="noopener noreferrer">
               <Button variant="cta" size="xl">
                 Book a Free AI Audit
               </Button>
-            </Link>
+            </a>
           </div>
         </section>
       </main>
